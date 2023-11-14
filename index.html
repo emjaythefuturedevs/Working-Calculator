@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<style>  
+ 
+    table {
+        border: 4px solid black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    input[type=button] {        
+        width: 100%;
+        padding: 20px 40px;
+        background-color: rgb(78, 82, 78);
+        color: white;
+        font-size:  24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }    
+    
+    input[type=text]:hover {
+        background-color: rgb(44, 205, 44);
+        color: rgb(0, 0, 0);
+    }
+    input[type="text"]{
+        padding: 20px 30px;
+        font-size:  24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+  
+</style>
+
+<body>
+  <div>
+	<form name="Calculator">        
+		<table>
+			<tr>
+        <td colspan="3"><input type="text" name="Answer"></td>
+        <td><input type="button" value="C" name="Delete" onclick="Calculator.Answer.value = ' ' "></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="+" onclick="Calculator.Answer.value += '+' "></td>
+				<td><input type="button" value="-" onclick="Calculator.Answer.value += '-' "></td>
+				<td><input type="button" value="/" onclick="Calculator.Answer.value += '/' "></td>
+				<td><input type="button" value="*" onclick="Calculator.Answer.value += '*' "></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="7" onclick="Calculator.Answer.value += '7' "></td>
+				<td><input type="button" value="8" onclick="Calculator.Answer.value += '8' "></td>
+				<td><input type="button" value="9" onclick="Calculator.Answer.value += '9' "></td>
+				<td rowspan="3"><input type="button" value="=" id="del" onclick="Calculator.Answer.value = eval(Calculator.Answer.value) "></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="4" onclick="Calculator.Answer.value += '4' "></td>
+				<td><input type="button" value="5" onclick="Calculator.Answer.value += '5' "></td>
+				<td><input type="button" value="6" onclick="Calculator.Answer.value += '6' "></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="1" onclick="Calculator.Answer.value += '1' "></td>
+				<td><input type="button" value="2" onclick="Calculator.Answer.value += '2' "></td>
+				<td><input type="button" value="3" onclick="Calculator.Answer.value += '3' "></td>
+			</tr>            
+		<table>         
+	</form>
+  </div> 
+</body>        
+</html>
